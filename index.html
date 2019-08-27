@@ -63,6 +63,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#my-website">My Website</a></li>
+            <li><a href="#updating">Updating</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -79,7 +80,43 @@
 <p>After this went to my github account and the files and folders from my laptops site folder were in<br />
 https://github.com/irsbugs/my-website/...</p>
 <p>In github Settins I set the Github Pages source to be master branch. I was then able to use my laptops browser to go to https://irsbugs.github.io/my-website/index.html and the web-site was available.</p>
-<p>For some reason  https://irsbugs.github.io/my-website/ would give a 404 error but it was OK with the index.html appended to it.</p></div>
+<p>For some reason  https://irsbugs.github.io/my-website/ would give a 404 error but it was OK with the index.html appended to it.</p>
+<h2 id="updating">Updating</h2>
+<p>Example of updating after editing index.md</p>
+<p>Update mkdocs and check in local browser</p>
+<pre><code>(venv7) ian@X200:~/my-website$ mkdocs build --clean &amp;&amp; mkdocs serve
+INFO    -  Cleaning site directory 
+INFO    -  Building documentation to directory: /home/ian/my-website/site 
+INFO    -  Building documentation... 
+INFO    -  Cleaning site directory 
+[I 190828 07:25:24 server:296] Serving on http://127.0.0.1:8000
+[I 190828 07:25:24 handlers:62] Start watching changes
+
+</code></pre>
+
+<p>Now commit the updates in site folder</p>
+<pre><code>(venv7) ian@X200:~/my-website$ cd site
+(venv7) ian@X200:~/my-website/site$ git commit -a &quot;updates to index.md&quot;
+ 4 files changed, 14 insertions(+), 4 deletions(-)
+(venv7) ian@X200:~/my-website/site$ 
+</code></pre>
+
+<p>Now push the changes on the laptop to github</p>
+<pre><code>(venv7) ian@X200:~/my-website/site$ 
+(venv7) ian@X200:~/my-website/site$ git push -u origin master
+Username for 'https://github.com': irsbugs
+Password for 'https://irsbugs@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.65 KiB | 1.65 MiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/irsbugs/my-website.git
+   4784b0f..dcf52a7  master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+(venv7) ian@X200:~/my-website/site$ 
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -162,5 +199,5 @@ https://github.com/irsbugs/my-website/...</p>
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-08-27 19:25:24
+Build Date UTC : 2019-08-27 19:44:09
 -->
