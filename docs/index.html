@@ -53,6 +53,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#my-website">My Website</a></li>
+            <li><a href="#my-website-creation">My Website Creation</a></li>
             <li><a href="#updating">Updating</a></li>
             <li><a href="#repeat-of-example">Repeat of Example:</a></li>
     </ul>
@@ -62,6 +63,31 @@
 <h1 id="my-website">My Website</h1>
 <p>This is <em>my website</em>.</p>
 <p>This document is created using <a href="https://www.markdownguide.org/">Markdown</a>.</p>
+<h2 id="my-website-creation">My Website Creation</h2>
+<p>My website was created using the mkdocs application. The mkdocs.yml file used for configuration is as follows:</p>
+<pre><code>site_name: My Website
+
+site_dir: site/docs
+# The folder site is a git repository on the laptop.
+# The folder docs is the website and contains index.html.
+# Github will therefore have a docs folder 
+# Github Pages Source is set to master branch docs/ folder
+
+
+nav:
+    - Home: index.md
+
+</code></pre>
+
+<p>The folder site is a git repository</p>
+<pre><code>(venv7) ian@X200:~/my-website/site$ ls -Al
+total 8
+drwxrwxr-x 7 ian ian 4096 Aug 28 11:40 docs
+drwxrwxr-x 8 ian ian 4096 Aug 28 11:43 .git
+
+</code></pre>
+
+<p>By creating my website in the folder docs, this then matches with a Github default folder name for project websites.</p>
 <p>I created my-website repository on irsbugs account of github</p>
 <p>In creating i I didn't add any README.md so there were no files in the account.</p>
 <p>I then went to my laptop where a mkdocs site folder has had git applied.</p>
@@ -212,5 +238,5 @@ Counting objects: 6, done.</p>
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-08-27 23:40:30
+Build Date UTC : 2019-08-27 23:49:54
 -->
