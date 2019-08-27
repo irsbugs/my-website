@@ -64,6 +64,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#my-website">My Website</a></li>
             <li><a href="#updating">Updating</a></li>
+            <li><a href="#repeat-of-example">Repeat of Example:</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -114,7 +115,31 @@ remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/irsbugs/my-website.git
    4784b0f..dcf52a7  master -&gt; master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
-</code></pre></div>
+</code></pre>
+
+<h2 id="repeat-of-example">Repeat of Example:</h2>
+<p>(venv7) ian@X200:~/my-website/site$ <strong>cd ..</strong></p>
+<p>(venv7) ian@X200:~/my-website$ <strong>mkdocs build --clean</strong>
+INFO    -  Cleaning site directory 
+INFO    -  Building documentation to directory: /home/ian/my-website/site 
+(venv7) ian@X200:~/my-website$ <strong>cd site</strong>
+(venv7) ian@X200:~/my-website/site$ <strong>git commit -a -m "updates"</strong>
+[master dd16e66] updates
+ 3 files changed, 5 insertions(+), 7 deletions(-)
+ rewrite search/search_index.json (67%)
+(venv7) ian@X200:~/my-website/site$ <strong>git push -u origin master</strong>
+Username for 'https://github.com': <strong>irsbugs</strong>
+Password for 'https://irsbugs@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 727 bytes | 727.00 KiB/s, done.
+Total 6 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/irsbugs/my-website.git
+   1d35d05..dd16e66  master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+(venv7) ian@X200:~/my-website/site$ </p></div>
         </div>
 
         <footer class="col-md-12">
@@ -197,5 +222,5 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-08-27 19:51:39
+Build Date UTC : 2019-08-27 19:54:36
 -->
