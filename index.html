@@ -91,19 +91,18 @@ INFO    -  Building documentation...
 INFO    -  Cleaning site directory 
 [I 190828 07:25:24 server:296] Serving on http://127.0.0.1:8000
 [I 190828 07:25:24 handlers:62] Start watching changes
-
 </code></pre>
 
 <p>Now commit the updates in site folder</p>
 <pre><code>(venv7) ian@X200:~/my-website$ cd site
-(venv7) ian@X200:~/my-website/site$ git commit -a &quot;updates to index.md&quot;
+(venv7) ian@X200:~/my-website/site$ git commit -a -m &quot;updates to index.md&quot;
  4 files changed, 14 insertions(+), 4 deletions(-)
 (venv7) ian@X200:~/my-website/site$ 
 </code></pre>
 
+<p>Note: If you leave out the <em>-m "message"</em> then a session of nano will open to prompt you to add the message.</p>
 <p>Now push the changes on the laptop to github</p>
-<pre><code>(venv7) ian@X200:~/my-website/site$ 
-(venv7) ian@X200:~/my-website/site$ git push -u origin master
+<pre><code>(venv7) ian@X200:~/my-website/site$ git push -u origin master
 Username for 'https://github.com': irsbugs
 Password for 'https://irsbugs@github.com': 
 Counting objects: 7, done.
@@ -115,7 +114,6 @@ remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/irsbugs/my-website.git
    4784b0f..dcf52a7  master -&gt; master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
-(venv7) ian@X200:~/my-website/site$ 
 </code></pre></div>
         </div>
 
@@ -199,5 +197,5 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-08-27 19:44:09
+Build Date UTC : 2019-08-27 19:51:39
 -->
